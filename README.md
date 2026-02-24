@@ -18,13 +18,13 @@ Docker Compose로 전체 서비스를 정의하고, Nginx로 도메인별 라우
 
 ## 기술 스택
 
-| 분류 | 기술 |
-|------|------|
-| Container | Docker, Docker Compose |
-| Reverse Proxy | Nginx |
-| Database | MariaDB 11.8 |
-| Cache | Redis 7 |
-| SSL | Cloudflare Origin Certificate |
+| 분류          | 기술                          |
+| ------------- | ----------------------------- |
+| Container     | Docker, Docker Compose        |
+| Reverse Proxy | Nginx                         |
+| Database      | MariaDB 11.8                  |
+| Cache         | Redis 7                       |
+| SSL           | Cloudflare Origin Certificate |
 
 ## 아키텍처
 
@@ -60,16 +60,16 @@ Docker Compose로 전체 서비스를 정의하고, Nginx로 도메인별 라우
 
 ## 서비스 구성
 
-| 서비스 | 이미지 | 포트 | 설명 |
-|--------|--------|------|------|
-| frontend | tuno-frontend | 3000 | Next.js 프론트엔드 |
-| backend | tuno-backend | 4000 | Express API 서버 |
-| ws | tuno-ws | 8080 | WebSocket 릴레이 서버 |
-| ai-api | tuno-ai-api | 8000 | FastAPI 추론 서버 |
-| batch | tuno-batch | - | 데이터 수집 스케줄러 |
-| mariadb | mariadb:11.8 | 3306 | 데이터베이스 |
-| redis | redis:7-alpine | 6379 | 캐시/Pub-Sub |
-| nginx | nginx:alpine | 80, 443 | 리버스 프록시 |
+| 서비스   | 이미지         | 포트    | 설명                  |
+| -------- | -------------- | ------- | --------------------- |
+| frontend | tuno-frontend  | 3000    | Next.js 프론트엔드    |
+| backend  | tuno-backend   | 4000    | Express API 서버      |
+| ws       | tuno-ws        | 8080    | WebSocket 릴레이 서버 |
+| ai-api   | tuno-ai-api    | 8000    | FastAPI 추론 서버     |
+| batch    | tuno-batch     | -       | 데이터 수집 스케줄러  |
+| mariadb  | mariadb:11.8   | 3306    | 데이터베이스          |
+| redis    | redis:7-alpine | 6379    | 캐시/Pub-Sub          |
+| nginx    | nginx:alpine   | 80, 443 | 리버스 프록시         |
 
 ## Nginx 설정
 
@@ -91,7 +91,7 @@ ws.tunoinvest.com   → ws:8080
 
 ## 관련 저장소
 
-- [tuno-frontend](https://github.com/hyundonmoon/tuno-frontend) - Next.js 프론트엔드
-- [tuno-backend](https://github.com/hyundonmoon/tuno-backend) - Express API 서버
-- [tuno-ws](https://github.com/hyundonmoon/tuno-ws) - WebSocket 릴레이 서버
-- [tuno-ai](https://github.com/hyundonmoon/tuno-ai) - AI 분석 서버
+- [tuno-frontend](https://github.com/hiib1206/tuno-frontend) - Next.js 프론트엔드
+- [tuno-backend](https://github.com/hiib1206/tuno-backend) - Express API 서버
+- [tuno-ws](https://github.com/hiib1206/tuno-ws) - WebSocket 릴레이 서버
+- [tuno-ai](https://github.com/hiib1206/tuno-ai) - AI 분석 서버
